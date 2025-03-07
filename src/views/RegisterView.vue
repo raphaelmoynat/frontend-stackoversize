@@ -8,7 +8,7 @@ const email = ref('');
 const password = ref('');
 const message = ref('');
 
-const register = async () => {
+async function register(){
   try {
     const response = await axios.post('http://127.0.0.1:8000/register', {
       username: username.value,
@@ -45,7 +45,7 @@ const register = async () => {
         <input v-model="password" type="password" id="password" class="form-control" placeholder="Mot de passe" required />
       </div>
 
-      <button type="submit" class="btn btn-success ">
+      <button type="submit" class="btn btn-primary ">
          S'inscrire
       </button>
     </form>

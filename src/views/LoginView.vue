@@ -7,13 +7,14 @@ const username = ref('');
 const password = ref('');
 const message = ref('');
 
-const login = async () => {
+async function login() {
   try {
     const response = await axios.post('http://localhost:8000/login', {
       username: username.value,
       password: password.value
     });
     localStorage.setItem('token', response.data.access);
+    localStorage.setItem('user', username.value);
     message.value = "Connexion réussie";
   } catch (error) {
     message.value = "Identifiants incorrects";

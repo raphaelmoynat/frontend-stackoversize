@@ -13,6 +13,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+
+            <router-link to="/questions">
+              <a class="nav-link">Questions</a>
+            </router-link>
+          </li>
+          <li class="nav-item">
+
+            <router-link to="/create-question">
+              <a class="nav-link">Add question</a>
+            </router-link>
+          </li>
 
         </ul>
       </div>

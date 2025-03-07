@@ -5,7 +5,7 @@ import axios from 'axios';
 const message = ref('');
 const messageClass = ref('');
 
-const confirmEmail = async () => {
+async function confirmEmail() {
   const urlParams = new URLSearchParams(window.location.search);
   const email = urlParams.get('email');
 
