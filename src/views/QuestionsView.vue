@@ -51,7 +51,7 @@ onMounted(getQuestions);
             <span
               v-for="tag in question.tags"
               :key="tag"
-              class=""
+              class="badge bg-secondary p-2 fs-6"
             >
               #{{ tag }}
             </span>
