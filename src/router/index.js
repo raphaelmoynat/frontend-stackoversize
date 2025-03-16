@@ -7,6 +7,7 @@ import QuestionsView from '@/views/QuestionsView.vue';
 import QuestionDetailView from "@/views/QuestionDetailView.vue";
 import CreateQuestionView from "@/views/CreateQuestionView.vue";
 import EditQuestionView from "@/views/EditQuestionView.vue";
+import ProfileView from "@/views/ProfileView.vue";
 
 
 const routes = [
@@ -54,6 +55,11 @@ const routes = [
     path:"/edit-question/:id",
     name: 'edit-question',
     component: EditQuestionView
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: ProfileView
   }
 
 ]

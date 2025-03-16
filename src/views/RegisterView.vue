@@ -19,7 +19,7 @@ async function register(){
   } catch (error) {
     message.value = error
   }
-};
+}
 
 
 </script>

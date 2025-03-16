@@ -178,7 +178,7 @@ async function markAsBest(replyId) {
   if (!token) return;
 
   if (currentUser !== question.value.author) {
-    replyMessage.value = "Seul l'auteur de la question peut définir la meilleure réponse"
+    replyMessage.value = "Vous n'êtes pas l'auteur"
     setTimeout(() => {
       replyMessage.value = ""
     }, 2000)
@@ -273,10 +273,10 @@ onMounted(getQuestions);
                 <button
                   v-if="currentUser === question.author && !reply.is_best"
                   @click="markAsBest(reply.id)"
-                  class="btn btn-outline-success btn-sm me-2"
+                  class="btn btn-outline-success me-2"
                   title="Définir comme meilleure réponse"
                 >
-                  ✓ Meilleure réponse
+                  Meilleure réponse
                 </button>
 
                 <div v-if="currentUser === reply.author" class="ms-auto">
@@ -290,7 +290,7 @@ onMounted(getQuestions);
               </div>
             </div>
           </div>
-          <p v-else class="text-muted">Aucune réponse pour le moment.</p>
+          <p v-else class="text-muted">Aucune réponse pour le moment</p>
         </div>
 
 

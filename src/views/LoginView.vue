@@ -16,6 +16,8 @@ async function login() {
     localStorage.setItem('token', response.data.access);
     localStorage.setItem('user', username.value);
     message.value = "Connexion réussie";
+    window.location.href = '/questions';
+
   } catch (error) {
     message.value = "Identifiants incorrects";
   }
