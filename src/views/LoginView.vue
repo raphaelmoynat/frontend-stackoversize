@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
-
+import { useRouter } from 'vue-router';
 
 const username = ref('');
 const password = ref('');
 const message = ref('');
+const router = useRouter();
+
 
 async function login() {
   try {
@@ -16,7 +18,7 @@ async function login() {
     localStorage.setItem('token', response.data.access);
     localStorage.setItem('user', username.value);
     message.value = "Connexion réussie";
-    window.location.href = '/questions';
+    router.push('/questions');
 
   } catch (error) {
     message.value = "Identifiants incorrects";
