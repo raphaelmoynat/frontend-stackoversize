@@ -13,6 +13,7 @@ function addTag (){
     tagInput.value = ''
 };
 
+
 function removeTag(){
   tags.value.splice(index, 1)
 };

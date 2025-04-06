@@ -328,6 +328,7 @@ onMounted(getQuestions);
         placeholder="Écrivez votre réponse..."
       >
 
+
       </textarea>
     </div>
     <div class="mt-2">

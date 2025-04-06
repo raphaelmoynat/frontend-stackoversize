@@ -28,7 +28,6 @@ async function confirmEmail() {
 onMounted(confirmEmail);
 </script>
 
-
 <template>
   <div class="container mt-5">
     <div class="card shadow-sm p-4 text-center">

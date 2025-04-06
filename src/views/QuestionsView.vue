@@ -11,6 +11,7 @@ async function getQuestions() {
   if (token) {
     try {
 
+
       const response = await axios.get('https://stackoversize.raphaelmoynat.com/questions', {
         headers : { Authorization: `Bearer ${token}` },
       });
