@@ -12,7 +12,7 @@ async function confirmEmail() {
 
   if (email) {
     try {
-      const response = await axios.get(`http://localhost:8000/confirm-email?email=${email}`);
+      const response = await axios.get(`https://stackoversize.raphaelmoynat.com/confirm-email?email=${email}`);
       message.value = response.data.message;
       messageClass.value = "text-success";
     } catch (error) {

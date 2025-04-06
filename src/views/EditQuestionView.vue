@@ -19,7 +19,7 @@ async function getQuestionDetails() {
   }
 
   try {
-    const response = await axios.get(`http://127.0.0.1:8000/question/${route.params.id}/`, {
+    const response = await axios.get(`https://stackoversize.raphaelmoynat.com/question/${route.params.id}/`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -50,7 +50,7 @@ async function updateQuestion() {
   }
 
   try {
-    await axios.put(`http://127.0.0.1:8000/question/edit/${route.params.id}`, {
+    await axios.put(`https://stackoversize.raphaelmoynat.com/question/edit/${route.params.id}`, {
       title: title.value,
       description: description.value,
       tags: tags.value

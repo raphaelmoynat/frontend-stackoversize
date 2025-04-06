@@ -21,7 +21,7 @@ async function createQuestion(){
   const token = localStorage.getItem("token");
   if (token){
     try {
-      const response = await axios.post('http://127.0.0.1:8000/question/create', {
+      const response = await axios.post('https://stackoversize.raphaelmoynat.com/question/create', {
         title: title.value,
         description: description.value,
         tags: tags.value

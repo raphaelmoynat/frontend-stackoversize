@@ -10,7 +10,7 @@ const message = ref('');
 
 async function register(){
   try {
-    const response = await axios.post('http://127.0.0.1:8000/register', {
+    const response = await axios.post('https://stackoversize.raphaelmoynat.com/register', {
       username: username.value,
       email: email.value,
       password: password.value

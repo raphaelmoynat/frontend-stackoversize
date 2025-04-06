@@ -21,7 +21,7 @@ async function getUserProfile() {
   }
 
   try {
-    const response = await axios.get('http://127.0.0.1:8000/profile', {
+    const response = await axios.get('https://stackoversize.raphaelmoynat.com/profile', {
       headers: { Authorization: `Bearer ${token}` }
     })
     userProfile.value = response.data
@@ -36,7 +36,7 @@ async function getAllProfiles() {
   if (!token) return;
 
   try {
-    const response = await axios.get('http://127.0.0.1:8000/profile/list', {
+    const response = await axios.get('https://stackoversize.raphaelmoynat.com/profile/list', {
       headers: { Authorization: `Bearer ${token}` }
     })
     allProfiles.value = response.data
@@ -50,7 +50,7 @@ async function updateProfile() {
   if (!token) return
 
   try {
-    await axios.put('http://127.0.0.1:8000/profile', {
+    await axios.put('https://stackoversize.raphaelmoynat.com/profile', {
       display_name: userProfile.value.display_name,
       bio: userProfile.value.bio,
       user_class: userProfile.value.user_class

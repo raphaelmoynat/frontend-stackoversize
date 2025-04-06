@@ -18,7 +18,7 @@ async function getQuestions() {
   const token = localStorage.getItem("token")
   if (token) {
     try {
-      const response = await axios.get(`http://localhost:8000/question/${route.params.id}/`, {
+      const response = await axios.get(`https://stackoversize.raphaelmoynat.com/question/${route.params.id}/`, {
         headers: {Authorization: `Bearer ${token}`},
       });
       question.value = response.data
@@ -36,7 +36,7 @@ async function deleteQuestion() {
   const token = localStorage.getItem("token")
   if (token) {
     try {
-      await axios.delete(`http://127.0.0.1:8000/question/delete/${route.params.id}`, {
+      await axios.delete(`https://stackoversize.raphaelmoynat.com/question/delete/${route.params.id}`, {
         headers: {Authorization: `Bearer ${token}`},
       });
       router.push('/questions')
@@ -64,7 +64,7 @@ async function postReply() {
   }
 
   try {
-    await axios.post(`http://127.0.0.1:8000/reply/create/${route.params.id}`,
+    await axios.post(`https://stackoversize.raphaelmoynat.com/reply/create/${route.params.id}`,
       {content: replyContent.value},
       {headers: {Authorization: `Bearer ${token}`}}
     );
@@ -91,7 +91,7 @@ async function deleteReply(replyId) {
   }
 
   try {
-    await axios.delete(`http://127.0.0.1:8000/reply/delete/${replyId}`, {
+    await axios.delete(`https://stackoversize.raphaelmoynat.com/reply/delete/${replyId}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
 
@@ -126,7 +126,7 @@ async function editReply(replyId) {
   if (!token) return
 
   try {
-    await axios.put(`http://127.0.0.1:8000/reply/edit/${replyId}`,
+    await axios.put(`https://stackoversize.raphaelmoynat.com/reply/edit/${replyId}`,
       {content: replyContent.value},
       {headers: {Authorization: `Bearer ${token}`}}
     );
@@ -156,7 +156,7 @@ async function voteReply(replyId, isUseful) {
   }
 
   try {
-    await axios.post(`http://127.0.0.1:8000/reply/vote/${replyId}`,
+    await axios.post(`https://stackoversize.raphaelmoynat.com/reply/vote/${replyId}`,
       { is_useful: isUseful },
       { headers: { Authorization: `Bearer ${token}` }}
     );
@@ -186,7 +186,7 @@ async function markAsBest(replyId) {
   }
 
   try {
-    await axios.post(`http://127.0.0.1:8000/reply/best/${replyId}`,
+    await axios.post(`https://stackoversize.raphaelmoynat.com/reply/best/${replyId}`,
       {},
       { headers: { Authorization: `Bearer ${token}` }}
     );

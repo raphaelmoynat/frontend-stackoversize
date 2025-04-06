@@ -9,7 +9,7 @@ const message = ref('');
 
 async function login() {
   try {
-    const response = await axios.post('http://localhost:8000/login', {
+    const response = await axios.post('https://stackoversize.raphaelmoynat.com/login', {
       username: username.value,
       password: password.value
     });
