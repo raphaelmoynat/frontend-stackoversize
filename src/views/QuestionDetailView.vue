@@ -326,7 +326,9 @@ onMounted(getQuestions);
         class="form-control"
         rows="4"
         placeholder="Écrivez votre réponse..."
-      ></textarea>
+      >
+
+      </textarea>
     </div>
     <div class="mt-2">
       <button

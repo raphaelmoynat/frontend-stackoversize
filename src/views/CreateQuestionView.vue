@@ -17,6 +17,7 @@ function removeTag(){
   tags.value.splice(index, 1)
 };
 
+
 async function createQuestion(){
   const token = localStorage.getItem("token");
   if (token){

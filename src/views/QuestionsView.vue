@@ -10,6 +10,7 @@ async function getQuestions() {
   const token = localStorage.getItem("token")
   if (token) {
     try {
+
       const response = await axios.get('https://stackoversize.raphaelmoynat.com/questions', {
         headers : { Authorization: `Bearer ${token}` },
       });

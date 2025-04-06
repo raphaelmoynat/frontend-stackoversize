@@ -18,6 +18,7 @@ async function getQuestionDetails() {
     return
   }
 
+
   try {
     const response = await axios.get(`https://stackoversize.raphaelmoynat.com/question/${route.params.id}/`, {
       headers: { Authorization: `Bearer ${token}` },
